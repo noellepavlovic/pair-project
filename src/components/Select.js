@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 
 import '../App.css';
 
-/* handleChange = (e) => {
+class Select extends Component {
+
+    handleChange = (e) => {
     
             e.preventDefault();
-            this.props.filterBy(e.target.value)
-        } */
+            this.props.setSelected(e.target.value)
+        } 
 
-class Select extends Component {
+
   render() {
     return (
     <div className="container">
