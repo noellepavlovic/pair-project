@@ -1,7 +1,14 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const axios = require('axios');
 const app = express();
 let movieArray = [];
+
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+app.use(bodyParser());
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -14,6 +21,7 @@ app.listen(8080, ()=> {
 })
 
 app.post('/genre', (req, res) => {
+    console.log(req.body.genre);
     axios.get('https://api.themoviedb.org/3/discover/movie', {
         params: {
             with_genres: req.body.genre,

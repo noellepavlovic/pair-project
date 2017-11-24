@@ -18,7 +18,11 @@ class App extends Component {
   }
   
   setSelected = (value) => {
+<<<<<<< HEAD
     console.log(value)
+=======
+    console.log(value);
+>>>>>>> 79900e5284befccc27887e14866da28fc86ab4eb
     axios.post('http://localhost:8080/genre', {genre: value})
     .then((response) => {
       console.log(response)
