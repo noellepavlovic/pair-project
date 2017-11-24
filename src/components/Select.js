@@ -10,13 +10,14 @@ class Select extends Component {
             this.props.setSelected(e.target.value)
         } 
 
+    render() {
+        return (
 
-  render() {
-    return (
-    <div className="container">
-                  
+
+            <div className="container">
+                Please select a movie genre from the drop-down below and we can suggest a movie for you to watch:
                 <div>
-                    <select className="dropdown" onChange={this.handleChange}> 
+                    <select className="dropdown" onChange={this.handleChange}>
                         <option value="28"> Action </option>
                         <option value="12"> Adventure </option>
                         <option value="16"> Animation </option>
@@ -36,12 +37,12 @@ class Select extends Component {
                         <option value="53"> Thriller </option>
                         <option value="10752"> War </option>
                         <option value="37"> Western </option>
- 
+
                     </select>
                 </div>
-    </div>
-    );
-  }
+            </div>
+        );
+    }
 }
 
 export default Select;

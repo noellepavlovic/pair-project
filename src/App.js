@@ -18,6 +18,7 @@ class App extends Component {
   }
   
   setSelected = (value) => {
+    console.log(value)
     axios.post('http://localhost:8080/genre', {genre: value})
     .then((response) => {
       console.log(response)
