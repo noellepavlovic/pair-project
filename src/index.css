@@ -7,3 +7,7 @@ body {
 .descHeading {
 	font-weight: bold;
 }
+
+.header {
+  background-color: rgb(80, 80, 102)
+}

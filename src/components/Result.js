@@ -19,12 +19,12 @@ class Result extends Component {
         (<div className="container">
           <div className="row">
             <div className="col-xs-12">
-              <h1> Results</h1>
+              <h1> You should watch:</h1>
             </div>
           </div>
           <div className="row">
             <div className="col-xs-4">
-              <img className="detailsImg" src={"https://image.tmdb.org/t/p/w300_and_h450_bestv2/" + this.movie.poster_path} alt="movie poster" />
+              <img className="detailsImg" src={"https://image.tmdb.org/t/p/w300_and_h450_bestv2/" + this.props.movie.poster_path} alt="movie poster" />
             </div>
             <div className="col-xs-8">
               <div className="row">
@@ -40,7 +40,7 @@ class Result extends Component {
                   Rating:
             </div>
                 <div className="col-xs-10">
-                  {this.props.movie.vote_avg}
+                  {this.props.movie.vote_average}
                 </div>
               </div>
               <div className="row">

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import '../App.css';
 
 class Select extends Component {
@@ -11,8 +10,6 @@ class Select extends Component {
 
     render() {
         return (
-
-
             <div className="container">
                 <div>
                     <select className="dropdown" onChange={this.handleChange}>
@@ -35,7 +32,6 @@ class Select extends Component {
                         <option value="53"> Thriller </option>
                         <option value="10752"> War </option>
                         <option value="37"> Western </option>
-
                     </select>
                 </div>
             </div>

@@ -8,7 +8,9 @@ body {
 
 .header {
   height: 15vh;
+  background-color: rgb(80, 80, 102);
 }
+
 .container {
   background-color: white;
 }
@@ -26,5 +28,10 @@ body {
 
 .App-intro {
   font-size: large;
+}
+
+
+.descHeading {
+	font-weight: bold;
 }
 
