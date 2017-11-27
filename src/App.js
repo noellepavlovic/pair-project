@@ -13,29 +13,37 @@ class App extends Component {
 		super();
 		this.state = {
         movie: null,
-        movieList: null
+        movieList: [],
+        genre: null
 		}
   }
 
   setSelected = (value) => {
-    console.log(value)
+    this.setState({
+      genre: value
+    })
     axios.post('http://localhost:8080/genre', {genre: value})
     .then((response) => {
       this.setState({
         movie: response.data
       })
-      console.log(this.state.movie);
     })
   }
 
   selectButton =() => {
-    axios.post('http://localhost:8080/genre', {genre: this.state.movie.genre_id})
+    axios.post('http://localhost:8080/genre', {genre: this.state.genre})
     .then((response) => {
       this.setState({
         movie: response.data
       })
-      console.log(this.state.movie);
     })
+  }
+
+  saveToList=() => {
+    this.setState({
+      movieList: this.state.movieList.concat(this.state.movie)
+    })
+    console.log(this.state.movieList);
   }
   
   render() {
@@ -43,7 +51,7 @@ class App extends Component {
       <div className="App container">
         <Header />
         <Select setSelected={(value) => this.setSelected(value)}/>
-        <Route exact path='/' render={(props)=><Result selectButton={this.selectButton} movie={this.state.movie}/>}/>
+        <Route exact path='/' render={(props)=><Result saveToList={this.saveToList} selectButton={this.selectButton} movie={this.state.movie}/>}/>
         <Route path='/list' render={(props)=> <List movieList={this.state.movieList} {...props}/>} />
       </div>
     );
