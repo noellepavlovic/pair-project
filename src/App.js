@@ -13,17 +13,15 @@ class App extends Component {
 		super();
 		this.state = {
         movie: null,
-        movieList: null
+        movieList: []
 		}
   }
   setSelected = (value) => {
-    console.log(value)
     axios.post('http://localhost:8080/genre', {genre: value})
     .then((response) => {
       this.setState({
         movie: response.data
       })
-      console.log(this.state.movie);
     })
   }
   selectButton =() => {
@@ -32,15 +30,20 @@ class App extends Component {
       this.setState({
         movie: response.data
       })
-      console.log(this.state.movie);
     })
+  }
+  saveToList=() => {
+    this.setState({
+      movieList: this.state.movieList.concat(this.state.movie)
+    })
+    console.log(this.state.movieList);
   }
   render() {
     return (
       <div className="App container">
         <Header />
         <Select setSelected={(value) => this.setSelected(value)}/>
-        <Route exact path='/' render={(props)=><Result selectButton={this.selectButton} movie={this.state.movie}/>}/>
+        <Route exact path='/' render={(props)=><Result saveToList={this.saveToList} selectButton={this.selectButton} movie={this.state.movie}/>}/>
         <Route path='/list' render={(props)=> <List movieList={this.state.movieList} {...props}/>} />
       </div>
     );

@@ -4,7 +4,6 @@ import '../App.css';
 
 class Result extends Component {
   render() {
-    console.log(this.props.movie)
     return (
  
       (!this.props.movie) ?
@@ -61,6 +60,7 @@ class Result extends Component {
               </div>
             </div>
             <button type="button" className="btn btn-primary"onClick={(e) => this.props.selectButton()}>Next Movie</button>
+            <button type="button" className="btn btn-primary"onClick={(e) => this.props.saveToList()}>Save to List</button>
           </div>
         </div>)
     )
