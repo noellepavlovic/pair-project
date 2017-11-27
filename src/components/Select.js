@@ -14,7 +14,6 @@ class Select extends Component {
 
 
             <div className="container">
-                Please select a movie genre from the drop-down below and we can suggest a movie for you to watch:
                 <div>
                     <select className="dropdown" onChange={this.handleChange}>
                         <option value="28"> Action </option>

@@ -4,6 +4,7 @@ import '../App.css';
 
 class Result extends Component {
   render() {
+    console.log(this.props.movie)
     return (
  
       (!this.props.movie) ?
