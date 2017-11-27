@@ -18,6 +18,18 @@ class App extends Component {
 		}
   }
 
+  componentDidMount() {
+    let __movieList = localStorage.getItem('movieList') !== null ? JSON.parse(localStorage.getItem('movieList')) : null
+
+    this.setState({
+			movieList: __movieList
+		})
+
+    window.addEventListener('beforeunload', (event) => {
+			localStorage.setItem('movieList', JSON.stringify(this.state.movieList))
+		}, false);
+  }
+
   setSelected = (value) => {
     this.setState({
       genre: value
@@ -45,7 +57,7 @@ class App extends Component {
     })
     console.log(this.state.movieList);
   }
-  
+
   render() {
     return (
       <div className="App container">
