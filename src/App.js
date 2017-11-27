@@ -13,10 +13,14 @@ class App extends Component {
 		super();
 		this.state = {
         movie: null,
-        movieList: []
+        movieList: [],
+        genre: null
 		}
   }
   setSelected = (value) => {
+    this.setState({
+      genre: value
+    })
     axios.post('http://localhost:8080/genre', {genre: value})
     .then((response) => {
       this.setState({
@@ -25,7 +29,7 @@ class App extends Component {
     })
   }
   selectButton =() => {
-    axios.post('http://localhost:8080/genre', {genre: this.state.movie.genre_id})
+    axios.post('http://localhost:8080/genre', {genre: this.state.genre})
     .then((response) => {
       this.setState({
         movie: response.data
