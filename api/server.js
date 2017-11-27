@@ -4,8 +4,8 @@ const axios = require('axios');
 const app = express();
 let movieArray = [];
 let testObject = {
-
 };
+let movie;
 
 function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -37,15 +37,12 @@ app.post('/genre', (req, res) => {
         }
       })
     .then(response=> {
-        let movie = response.data.results[randomInt(0, response.data.results.length)];
+        movie = response.data.results[randomInt(0, response.data.results.length)];
         console.log(movie);
-        //movieArray.push(response.data.results);
-        //console.log(movieArray);
-        //let movie=(movieArray[randomInt(0, movieArray.length)]);
         res.send(movie);
-    })
-    
+    }) 
 })
+
 
 /*app.post('/genre', (req, res) => {
     console.log(req.body);
