@@ -26,13 +26,21 @@ class App extends Component {
       console.log(this.state.movie);
     })
   }
-
+  selectButton =() => {
+    axios.post('http://localhost:8080/genre', {genre: this.state.movie.genre_id})
+    .then((response) => {
+      this.setState({
+        movie: response.data
+      })
+      console.log(this.state.movie);
+    })
+  }
   render() {
     return (
       <div className="App container">
         <Header />
         <Select setSelected={(value) => this.setSelected(value)}/>
-        <Route exact path='/' render={(props)=><Result movie={this.state.movie}/>}/>
+        <Route exact path='/' render={(props)=><Result selectButton={this.selectButton} movie={this.state.movie}/>}/>
         <Route path='/list' render={(props)=> <List movieList={this.state.movieList} {...props}/>} />
       </div>
     );
