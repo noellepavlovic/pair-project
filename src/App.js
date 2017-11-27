@@ -38,7 +38,7 @@ class App extends Component {
       <div className="App container">
         <Header />
         <Select setSelected={(value) => this.setSelected(value)}/>
-        <Result />
+        <Result movie={this.state.movie} />
       </div>
     );
   }
