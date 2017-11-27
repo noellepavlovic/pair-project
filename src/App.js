@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom'
 import axios from 'axios';
-
+import List from './components/List'
 import './App.css';
 
 import Header from './components/Header'
@@ -16,29 +16,24 @@ class App extends Component {
         movieList: null
 		}
   }
-  
-  componentDidUpdate() {
-    axios.get('http:///localhost:8080/genre')
-      .then(response => {
-        console.log(response)
-      })
-  }
-
   setSelected = (value) => {
     console.log(value)
     axios.post('http://localhost:8080/genre', {genre: value})
     .then((response) => {
-      console.log(response)
+      this.setState({
+        movie: response.data
+      })
+      console.log(this.state.movie);
     })
   }
 
   render() {
-    console.log(this.state.genreId)
     return (
       <div className="App container">
         <Header />
         <Select setSelected={(value) => this.setSelected(value)}/>
-        <Result movie={this.state.movie} />
+        <Route exact path='/' render={(props)=><Result movie={this.state.movie}/>}/>
+        <Route path='/list' render={(props)=> <List movieList={this.state.movieList} {...props}/>} />
       </div>
     );
   }
