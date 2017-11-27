@@ -16,6 +16,7 @@ class App extends Component {
         movieList: null
 		}
   }
+
   setSelected = (value) => {
     console.log(value)
     axios.post('http://localhost:8080/genre', {genre: value})
@@ -26,6 +27,7 @@ class App extends Component {
       console.log(this.state.movie);
     })
   }
+
   selectButton =() => {
     axios.post('http://localhost:8080/genre', {genre: this.state.movie.genre_id})
     .then((response) => {
@@ -35,6 +37,7 @@ class App extends Component {
       console.log(this.state.movie);
     })
   }
+  
   render() {
     return (
       <div className="App container">

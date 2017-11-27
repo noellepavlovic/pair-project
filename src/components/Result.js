@@ -8,7 +8,7 @@ class Result extends Component {
     return (
  
       (!this.props.movie) ?
-        (<div className="container">
+        (<div className="container details">
           <div className="row">
             <div className="col-xs-12">
               <h1> Please select a movie genre from the drop-down above</h1>
@@ -16,7 +16,7 @@ class Result extends Component {
           </div>
         </div>)
         :
-        (<div className="container">
+        (<div className="container details">
           <div className="row">
             <div className="col-xs-12">
               <h1> You should watch:</h1>
@@ -24,42 +24,38 @@ class Result extends Component {
           </div>
           <div className="row">
             <div className="col-xs-4">
-<<<<<<< HEAD
               <img className="detailsImg" src={"https://image.tmdb.org/t/p/w300_and_h450_bestv2/" + this.props.movie.poster_path} alt="movie poster" />
-=======
-              <img className="detailsImg" src={"https://image.tmdb.org/t/p/w300_and_h450_bestv2/" + this.props.movie.poster_path} alt="Image of movie Poster" />
->>>>>>> 5665fb958462ee247169601a053dc438e279d20a
             </div>
             <div className="col-xs-8">
               <div className="row">
-                <div className="col-xs-2 descHeading">
+                <div className="col-xs-2 descHeading text-left">
                   Title:
             </div>
-                <div className="col-xs-10">
+                <div className="col-xs-10 text-left">
                   {this.props.movie.title}
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-2 descHeading">
+                <div className="col-xs-2 descHeading text-left">
                   Rating:
             </div>
-                <div className="col-xs-10">
+                <div className="col-xs-10 text-left">
                   {this.props.movie.vote_average}
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-2 descHeading">
+                <div className="col-xs-2 descHeading text-left">
                   Release Date:
             </div>
-                <div className="col-xs-10">
+                <div className="col-xs-10 text-left">
                   {this.props.movie.release_date}
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-2 descHeading">
+                <div className="col-xs-2 descHeading text-left">
                   Genre:
             </div>
-                <div className="col-xs-10">
+                <div className="col-xs-10 text-left">
                   {this.props.movie.overview}
                 </div>
               </div>
