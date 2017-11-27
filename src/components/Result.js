@@ -23,11 +23,7 @@ class Result extends Component {
           </div>
           <div className="row">
             <div className="col-xs-4">
-<<<<<<< HEAD
               <img className="detailsImg" src={"https://image.tmdb.org/t/p/w300_and_h450_bestv2/" + this.props.movie.poster_path} alt="movie poster" />
-=======
-              <img className="detailsImg" src={"https://image.tmdb.org/t/p/w300_and_h450_bestv2/" + this.props.movie.poster_path} alt="Image of movie Poster" />
->>>>>>> 5665fb958462ee247169601a053dc438e279d20a
             </div>
             <div className="col-xs-8">
               <div className="row">
