@@ -6,7 +6,7 @@ class Result extends Component {
   render() {
     return (
  
-      (!this.state.movie) ?
+      (!this.props.movie) ?
         (<div className="container">
           <div className="row">
             <div className="col-xs-12">
@@ -23,7 +23,7 @@ class Result extends Component {
           </div>
           <div className="row">
             <div className="col-xs-4">
-              <img className="detailsImg" src={"https://image.tmdb.org/t/p/w300_and_h450_bestv2/" + this.movie.poster_path} alt="Image of movie Poster" />
+              <img className="detailsImg" src={"https://image.tmdb.org/t/p/w300_and_h450_bestv2/" + this.props.movie.poster_path} alt="Image of movie Poster" />
             </div>
             <div className="col-xs-8">
               <div className="row">
@@ -59,6 +59,7 @@ class Result extends Component {
                 </div>
               </div>
             </div>
+            <button type="button" className="btn btn-primary"onClick={(e) => this.props.selectButton()}>Next Movie</button>
           </div>
         </div>)
     )
