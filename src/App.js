@@ -19,16 +19,19 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let __movieList = localStorage.getItem('movieList') !== null ? JSON.parse(localStorage.getItem('movieList')) : null
+    console.log(localStorage.getItem('movieList'))
+    console.log(this.state.movieList)
+    let __movieList = localStorage.getItem('movieList') !== null ? JSON.parse(localStorage.getItem('movieList')) : []
+    console.log(__movieList)
 
     this.setState({
 			movieList: __movieList
 		})
 
     window.addEventListener('beforeunload', (event) => {
-			localStorage.setItem('movieList', JSON.stringify(this.state.movieList))
-		}, false);
-  }
+			localStorage.setItem('movieList', JSON.stringify(this.state.movieList)) 
+		}, false); 
+  } 
 
   setSelected = (value) => {
     this.setState({
@@ -53,7 +56,7 @@ class App extends Component {
 
   saveToList=() => {
     this.setState({
-      movieList: this.state.movieList.concat(this.state.movie)
+      movieList: this.state.movieList.concat([this.state.movie])
     })
     console.log(this.state.movieList);
   }

@@ -10,7 +10,8 @@ class Select extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div>
+            <h2> Please select a movie genre from the drop-down menu below: </h2>           
                 <div>
                     <select className="dropdown" onChange={this.handleChange}>
                         <option value="28"> Action </option>

@@ -5,8 +5,8 @@ import '../App.css';
 class Header extends Component {
   render() {
     return (
-    <div className="container header">
-        <h1 className="App-title">Movie Recommendations</h1>
+    <div className="header">
+        <img src="/img/banner.png" alt="what should I watch" />
     </div>
     );
   }

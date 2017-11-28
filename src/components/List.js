@@ -11,7 +11,7 @@ class List extends Component {
             )
             console.log(newList);
         return(
-            <div className="container list">
+            <div className="list">
                 {newList}
             </div>
         )
