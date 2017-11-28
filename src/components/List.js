@@ -11,8 +11,13 @@ class List extends Component {
             )
             console.log(newList);*/
         return(
+<<<<<<< HEAD
             <div>
                 placeholder
+=======
+            <div className="list">
+                {newList}
+>>>>>>> 6db0e8c0c2cd418d0bfc17556696683d62164bbb
             </div>
         )
     }

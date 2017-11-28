@@ -5,17 +5,14 @@ import '../App.css';
 class Result extends Component {
   render() {
     return (
- 
+
       (!this.props.movie) ?
-        (<div className="container">
+        (<div className="details">
           <div className="row">
-            <div className="col-xs-12">
-              <h1> Please select a movie genre from the drop-down above</h1>
-            </div>
           </div>
         </div>)
         :
-        (<div className="container">
+        (<div className="details">
           <div className="row">
             <div className="col-xs-12">
               <h1> You should watch:</h1>
@@ -27,41 +24,50 @@ class Result extends Component {
             </div>
             <div className="col-xs-8">
               <div className="row">
-                <div className="col-xs-2 descHeading">
+                <div className="col-xs-2 descHeading text-left">
                   Title:
-            </div>
-                <div className="col-xs-10">
+                </div>
+                <div className="col-xs-10 text-left">
                   {this.props.movie.title}
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-2 descHeading">
+                <div className="col-xs-2 descHeading text-left">
                   Rating:
-            </div>
-                <div className="col-xs-10">
+                </div>
+                <div className="col-xs-10 text-left">
                   {this.props.movie.vote_average}
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-2 descHeading">
+                <div className="col-xs-2 descHeading text-left">
                   Release Date:
-            </div>
-                <div className="col-xs-10">
+                </div>
+                <div className="col-xs-10 text-left">
                   {this.props.movie.release_date}
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-2 descHeading">
+                <div className="col-xs-2 descHeading text-left">
                   Genre:
-            </div>
-                <div className="col-xs-10">
+                </div>
+                <div className="col-xs-10 text-left">
                   {this.props.movie.overview}
                 </div>
               </div>
+              <div className="row btnRow">
+                <div className="col-xs-12 text-center">
+                <button type="button" className="btn btn-primary" onClick={(e) => this.props.selectButton()}>Next Movie</button>
+                <button type="button" className="btn btn-primary" onClick={(e) => this.props.saveToList()}>Save to List</button>
+                </div>
+              </div>
             </div>
+<<<<<<< HEAD
             <button type="button" className="btn btn-primary"onClick={(e) => this.props.selectButton()}>Next Movie</button>
             <button type="button" className="btn btn-primary"onClick={(e) => this.props.saveToList()}>Save to List</button>
             <Link to ='/list'><button type="button" className="btn btn-primary">View List</button></Link>
+=======
+>>>>>>> 6db0e8c0c2cd418d0bfc17556696683d62164bbb
           </div>
         </div>)
     )

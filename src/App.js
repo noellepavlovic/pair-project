@@ -17,6 +17,22 @@ class App extends Component {
         genre: null
 		}
   }
+
+  componentDidMount() {
+    console.log(localStorage.getItem('movieList'))
+    console.log(this.state.movieList)
+    let __movieList = localStorage.getItem('movieList') !== null ? JSON.parse(localStorage.getItem('movieList')) : []
+    console.log(__movieList)
+
+    this.setState({
+			movieList: __movieList
+		})
+
+    window.addEventListener('beforeunload', (event) => {
+			localStorage.setItem('movieList', JSON.stringify(this.state.movieList)) 
+		}, false); 
+  } 
+
   setSelected = (value) => {
     this.setState({
       genre: value
@@ -28,6 +44,7 @@ class App extends Component {
       })
     })
   }
+
   selectButton =() => {
     axios.post('http://localhost:8080/genre', {genre: this.state.genre})
     .then((response) => {
@@ -36,6 +53,7 @@ class App extends Component {
       })
     })
   }
+
   saveToList=() => {
     let found = false;
     for(let i=0; i<this.state.movieList.length; i++){

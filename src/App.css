@@ -7,31 +7,36 @@ body {
 }
 
 .header {
-  height: 15vh;
-  background-color: rgb(80, 80, 102);
+  height: 20vh;
+  margin-bottom: 5vh; 
+  background-color: #c2e9f9;
+  border-radius: 10px;
+  margin-top: 15px;
 }
 
 .container {
   background-color: white;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.details,
+.list {
+  min-height: 100vh;
 }
-
-.App-title {
-  font-size: 4em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
 
 .descHeading {
 	font-weight: bold;
 }
 
+.btnRow {
+  height: 10vh;
+  line-height: 10vh;
+  vertical-align: bottom;
+}
+
+.btn { 
+  margin: 5px;
+}
+
+img {
+  border-radius: 5px;
+}
