@@ -37,11 +37,19 @@ class App extends Component {
     })
   }
   saveToList=() => {
-    this.setState({
-      movieList: this.state.movieList.concat(this.state.movie)
-    })
-    console.log(this.state.movieList);
+    let found = false;
+    for(let i=0; i<this.state.movieList.length; i++){
+      if (this.state.movieList[i].id === this.state.movie.id) {
+        found = true
+    }
   }
+    if (!found) {
+    this.setState({
+      movieList: this.state.movieList.concat([this.state.movie])
+    },()=> console.log(this.state.movieList))
+  }
+}
+  
   render() {
     return (
       <div className="App container">
