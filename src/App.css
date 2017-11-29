@@ -40,3 +40,8 @@ body {
 img {
   border-radius: 5px;
 }
+.listImg{
+  height: 225px;
+  width: 150px;
+  float: right;
+}

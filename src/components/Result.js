@@ -49,7 +49,7 @@ class Result extends Component {
               </div>
               <div className="row">
                 <div className="col-xs-2 descHeading text-left">
-                  Genre:
+                  Summary:
                 </div>
                 <div className="col-xs-10 text-left">
                   {this.props.movie.overview}
@@ -62,12 +62,9 @@ class Result extends Component {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             <button type="button" className="btn btn-primary"onClick={(e) => this.props.selectButton()}>Next Movie</button>
             <button type="button" className="btn btn-primary"onClick={(e) => this.props.saveToList()}>Save to List</button>
             <Link to ='/list'><button type="button" className="btn btn-primary">View List</button></Link>
-=======
->>>>>>> 6db0e8c0c2cd418d0bfc17556696683d62164bbb
           </div>
         </div>)
     )
