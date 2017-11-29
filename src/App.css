@@ -45,3 +45,11 @@ img {
   width: 150px;
   float: right;
 }
+
+h3 {
+  display: inline-block;
+}
+
+.dropDown {
+  margin-left: 10px;
+}
