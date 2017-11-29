@@ -11,9 +11,9 @@ class Select extends Component {
     render() {
         return (
             <div>
-            <h2> Please select a movie genre from the drop-down menu below: </h2>           
-                <div>
-                    <select className="dropdown" onChange={this.handleChange}>
+            <h3>Please select a movie genre from the drop-down menu: </h3>          
+                
+                    <select className="dropdown dropDown" onChange={this.handleChange}>
                         <option value="28"> Action </option>
                         <option value="12"> Adventure </option>
                         <option value="16"> Animation </option>
@@ -34,7 +34,7 @@ class Select extends Component {
                         <option value="10752"> War </option>
                         <option value="37"> Western </option>
                     </select>
-                </div>
+                
             </div>
         );
     }
