@@ -59,15 +59,11 @@ class Result extends Component {
                 <div className="col-xs-12 text-center">
                 <button type="button" className="btn btn-primary" onClick={(e) => this.props.selectButton()}>Next Movie</button>
                 <button type="button" className="btn btn-primary" onClick={(e) => this.props.saveToList()}>Save to List</button>
+                <Link to ='/list'><button type="button" className="btn btn-primary">View List</button></Link>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            <button type="button" className="btn btn-primary"onClick={(e) => this.props.selectButton()}>Next Movie</button>
-            <button type="button" className="btn btn-primary"onClick={(e) => this.props.saveToList()}>Save to List</button>
-            <Link to ='/list'><button type="button" className="btn btn-primary">View List</button></Link>
-=======
->>>>>>> 6db0e8c0c2cd418d0bfc17556696683d62164bbb
+            
           </div>
         </div>)
     )
