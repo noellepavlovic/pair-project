@@ -14,7 +14,8 @@ class App extends Component {
 		this.state = {
         movie: null,
         movieList: [],
-        genre: null
+        genre: null,
+        shouldHide: false
 		}
   }
 
@@ -67,14 +68,24 @@ class App extends Component {
     },()=> console.log(this.state.movieList))
   }
 }
+  hideSelector =() => {
+    this.setState({
+      shouldHide: true
+    })
+  }
+  showSelector =() => {
+    this.setState({
+      shouldHide: false
+    })
+  }
   
   render() {
     return (
       <div className="App container">
         <Header />
-        <Select setSelected={(value) => this.setSelected(value)}/>
-        <Route exact path='/' render={(props)=><Result saveToList={this.saveToList} selectButton={this.selectButton} movie={this.state.movie}/>}/>
-        <Route path='/list' render={(props)=> <List movieList={this.state.movieList} {...props}/>} />
+        <Select shouldHide={this.state.shouldHide} setSelected={(value) => this.setSelected(value)}/>
+        <Route exact path='/' render={(props)=><Result hideSelector={this.hideSelector} saveToList={this.saveToList} selectButton={this.selectButton} movie={this.state.movie}/>}/>
+        <Route path='/list' render={(props)=> <List showSelector={this.showSelector} movieList={this.state.movieList} {...props}/>} />
       </div>
     );
   }

@@ -9,6 +9,9 @@ class Select extends Component {
         } 
 
     render() {
+        if (this.props.shouldHide === true) {
+            return <div></div>
+        }
         return (
             <div>
             <h3>Please select a movie genre from the drop-down menu: </h3>          

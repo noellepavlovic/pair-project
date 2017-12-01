@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import '../App.css';
 
 class List extends Component {
+
     render() {
         console.log(this.props);
             let newList=[];
@@ -45,7 +47,12 @@ class List extends Component {
             console.log(newList);
         return(
             <div>
+                <div>
+                  <Link to ='/'><button type="button" className="btn btn-primary"onClick={(e) => this.props.showSelector()}>Back</button></Link>
+                </div>
+                <div>
                 {newList}
+                </div>
             </div>
         )
     }

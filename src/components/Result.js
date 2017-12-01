@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import '../App.css';
 
 class Result extends Component {
@@ -64,7 +64,7 @@ class Result extends Component {
             </div>
             <button type="button" className="btn btn-primary"onClick={(e) => this.props.selectButton()}>Next Movie</button>
             <button type="button" className="btn btn-primary"onClick={(e) => this.props.saveToList()}>Save to List</button>
-            <Link to ='/list'><button type="button" className="btn btn-primary">View List</button></Link>
+            <Link to ='/list'><button type="button" className="btn btn-primary"onClick={(e) => this.props.hideSelector()}>View List</button></Link>
           </div>
         </div>)
     )
