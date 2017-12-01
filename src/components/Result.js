@@ -10,7 +10,7 @@ class Result extends Component {
         (<div className="details">
           <div className="row"> 
           <img className="stretch" src="/img/movies.jpg" alt="movie collage" />
-          <Link to ='/list'><button type="button" className="btn btn-primary">View List</button></Link>
+          <Link to ='/list'><button type="button" className="btn btn-primary"onClick={(e) => this.props.hideSelector()}>View List</button></Link>
           </div>
         </div>)
         :
@@ -61,13 +61,10 @@ class Result extends Component {
                 <div className="col-xs-12 text-center">
                 <button type="button" className="btn btn-primary" onClick={(e) => this.props.selectButton()}>Next Movie</button>
                 <button type="button" className="btn btn-primary" onClick={(e) => this.props.saveToList()}>Save to List</button>
-                <Link to ='/list'><button type="button" className="btn btn-primary">View List</button></Link>
+                <Link to ='/list'><button type="button" className="btn btn-primary"onClick={(e) => this.props.hideSelector()}>View List</button></Link>
                 </div>
               </div>
             </div>
-            <button type="button" className="btn btn-primary"onClick={(e) => this.props.selectButton()}>Next Movie</button>
-            <button type="button" className="btn btn-primary"onClick={(e) => this.props.saveToList()}>Save to List</button>
-            <Link to ='/list'><button type="button" className="btn btn-primary"onClick={(e) => this.props.hideSelector()}>View List</button></Link>
           </div>
         </div>)
     )
