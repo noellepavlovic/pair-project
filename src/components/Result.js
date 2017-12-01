@@ -49,7 +49,7 @@ class Result extends Component {
               </div>
               <div className="row">
                 <div className="col-xs-2 descHeading text-left">
-                  Genre:
+                  Summary:
                 </div>
                 <div className="col-xs-10 text-left">
                   {this.props.movie.overview}
@@ -63,8 +63,7 @@ class Result extends Component {
                 </div>
               </div>
             </div>
-            
-          </div>
+            </div>
         </div>)
     )
   }
