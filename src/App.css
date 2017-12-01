@@ -12,6 +12,7 @@ body {
   background-color: #c2e9f9;
   border-radius: 10px;
   margin-top: 15px;
+  max-height: 150px;
 }
 
 .container {
@@ -27,6 +28,13 @@ body {
 	font-weight: bold;
 }
 
+.hdiv {
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 25px;
+  margin-left: 50px;
+}
+
 .btnRow {
   height: 10vh;
   line-height: 10vh;
@@ -40,6 +48,7 @@ body {
 img {
   border-radius: 5px;
 }
+
 .listImg{
   height: 225px;
   width: 150px;
@@ -51,6 +60,7 @@ img {
   margin-bottom: 20px;
 }
 
+h2,
 h3 {
   display: inline-block;
 }
@@ -66,4 +76,10 @@ h3 {
 
 .resHead {
   margin-bottom: 15px;
+}
+
+.rightBtn {
+  float: right;
+  margin-right: 30px;
+  margin-top: 10px;
 }

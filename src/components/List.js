@@ -47,8 +47,9 @@ class List extends Component {
             console.log(newList);
         return(
             <div>
-                <div>
-                  <Link to ='/'><button type="button" className="btn btn-primary"onClick={(e) => this.props.showSelector()}>Back</button></Link>
+                <div className="hdiv">
+                    <h2>Your Saved Movies</h2>
+                    <Link to ='/'><button type="button" className="btn btn-primary rightBtn"onClick={(e) => this.props.showSelector()}>Back</button></Link>
                 </div>
                 <div>
                 {newList}
