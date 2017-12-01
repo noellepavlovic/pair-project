@@ -10,7 +10,7 @@ class List extends Component {
         for (let i=0; i<this.props.movieList.length; i++)
             newList.push(
             <div className ="parent">
-                <div className="row">
+                <div className="row listRow">
             <div className="col-xs-4">
               <img className="listImg" src={"https://image.tmdb.org/t/p/w300_and_h450_bestv2/" + this.props.movieList[i].poster_path} alt="movie poster" />
             </div>

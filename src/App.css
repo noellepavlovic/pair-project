@@ -8,7 +8,7 @@ body {
 
 .header {
   height: 20vh;
-  margin-bottom: 5vh; 
+  margin-bottom: 15px; 
   background-color: #c2e9f9;
   border-radius: 10px;
   margin-top: 15px;
@@ -46,10 +46,24 @@ img {
   float: right;
 }
 
+.selectRow,
+.listRow {
+  margin-bottom: 20px;
+}
+
 h3 {
   display: inline-block;
 }
 
 .dropDown {
   margin-left: 10px;
+}
+
+.stretch {
+  height: 95%;
+  width: 95%;
+}
+
+.resHead {
+  margin-bottom: 15px;
 }
