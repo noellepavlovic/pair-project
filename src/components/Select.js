@@ -4,16 +4,19 @@ import '../App.css';
 class Select extends Component {
 
     handleChange = (e) => {
+        console.log("in handleChange")
+        console.log(e.target.value)
             e.preventDefault();
             this.props.setSelected(e.target.value)
         } 
 
     render() {
         return (
-            <div>
+            <div className="selectRow">
             <h3>Please select a movie genre from the drop-down menu: </h3>          
                 
                     <select className="dropdown dropDown" onChange={this.handleChange}>
+                        <option>--Select a genre--</option>
                         <option value="28"> Action </option>
                         <option value="12"> Adventure </option>
                         <option value="16"> Animation </option>

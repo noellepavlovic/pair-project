@@ -8,13 +8,15 @@ class Result extends Component {
 
       (!this.props.movie) ?
         (<div className="details">
-          <div className="row">
+          <div className="row"> 
+          <img className="stretch" src="/img/movies.jpg" alt="movie collage" />
+          <Link to ='/list'><button type="button" className="btn btn-primary">View List</button></Link>
           </div>
         </div>)
         :
         (<div className="details">
           <div className="row">
-            <div className="col-xs-12">
+            <div className="col-xs-12 resHead">
               <h1> You should watch:</h1>
             </div>
           </div>
